@@ -468,6 +468,17 @@ elif st.session_state.page == "chat":
     if st.session_state.fade_transition:
         st.markdown("""
         <style>
+        @keyframes chatFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .block-container {
             animation: chatFadeIn 0.7s ease-out both;
         }
